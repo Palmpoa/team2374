@@ -1,32 +1,74 @@
 (.txt)
-Unless you are gainfully employed, this shall not mean much to you.
+PLEASE: Whether using or updating the general files of Team 2374,
+READ THIS DOCUMENT.
+
 In SVN format, please save ALL files meant to be opened by the xp98
 text editor be saved as .bz2
 Write the file extension to the first line in brackets, do not 
 assume everybody will know how a file is used.
 All other file types are left the way they are.
 
-WHEN ADDING HOOKS OR FOLDERS: Please please navigate the svn in
-order to determine that A: The folder already exists and B:
-that you save in a revision or have the decency to check if a
-file is stored under the same name. IF IT IS SOMETHING NEW:
-Name it in such a fashion that its purpose is easily discovered
-for others or will remind you what the file or folder itself 
-contains. If not, include a readme file determining the contents
-of the folder. Yes, it is fun to name directories SUN_TZU but 
-in practice it is an utter pain to decrypt 2 months later when
-it is opened to only find some serial dynamic link libraries.
-
-THE JHS GAMEMAKER TEAMS WILL ALSO UTILIZE PARTITIONS OF 
-team2374 UNLESS IT IS DEEMED STUPID AND SUPERFICIAL.
-This means all users have utmost courtesy of others work. I will
+All users have utmost courtesy of others work. I will
 make weekly backups of the svn, and any foolishness such as dropping
 a 420 GB jpeg into a project folder is not going to be tolerated and
 will be rolled back. Any project members can contact me in order to
 have their folder's content manually backed up.
 
-IF YOU NEED TO ADD ANYTHING, CONTACT ME, YES ME.
-The password changes constantly and its listing here may not be up
-to scratch. 
+How to contribute:
+Make a folder called Upload or whatever, it does not really matter
+what the name of it is. Now, if you are uploading a file to the svn,
+first determine where the hell it will go, and then create the
+substructure within Upload. Therefore, if the directory is:
+Trunk/MAINDIR/SUBDIR/MAYBEDIR/SWAN, then the substructure of the
+folder you add will be: Upload/MAINDIR/SUBDIR/MAYBEDIR/SWAN. Then
+within the fictional SWAN, place the file. Right click the Upload
+folder, and click add under the subtab Tortoise SVN. Everything 
+should be checked. Then click ok. "EUBFHUJVEYHNFIEUYFH nothing 
+happened!", you may exclaim in annoyance, but this is ok. Right
+click the folder AGAIN, and under Tortoise SVN, click commit.
+You will be prompted for password and username. The username is me,
+Palmpou, and the password fluctuates weekly (or biweekly). Every
+time I archive the SVN, the password is updated here but in rare 
+situations, it may change. In that case, you may contact me to
+obtain the current password through me either with email, in person,
+or my Steam account.
 
-8-27-2013:Eu8wk2Yy9ts6
+GENERAL GUIDELINES FOR ADDING HOOKS.
+Triple check to make sure a filename is not already taken. If it is,
+rename your file. Dont make it a rev because it is not the same
+file. This is common sense, and one should not such a reminder, but
+there we go. Also, make sure that the file really needs to be added.
+Do not add temporary files, it adds bulk.
+
+GENERAL GUIDELINES FOR UPDATING HOOKS.
+Save in revisions. Please. My rollbacks will not save everything,
+and the fewer that need to be done, the better. If there is a file
+that needs to be overriden, then resave revisions under something
+else. (ie style.css that you dont want to bs each time)
+When you commit, add descriptive comments. Not 'rwjrekjrberbgeyr'.
+
+GENERAL CHECKOUT GUIDELINES.
+Get to the directory you want in the web browser, then copy and
+use that url. Dont download the full thing. The Z: drive gets
+full the full svn, and it UPDATES the full svn each day.
+
+Data hierarchy by date:
+
+0. team2374
+1. Contributions by viewers like you.
+2. Z:Drive
+3. An average subversion checkout
+4. Pamlpou's backup
+5. Somebody who has not contributed for a while
+
+A good rule of thumb is to contact the contributer rather than
+me when a dependency is gone, especially when taking the 
+hierarchy in to account.
+After hopefully reading everything, I hope you are all set to
+use the new subversion system!
+
+-Sameer Raviprakash-
+
+Code archive for technical reasons
+
+8-12-2013: Eu8wk2Yy9ts6
