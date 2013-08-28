@@ -1,0 +1,26 @@
+(.txt)
+Unless you are gainfully employed, this shall not mean much to you.
+In SVN format, please save ALL files meant to be opened by the xp98
+text editor be saved as .bz2
+Write the file extension to the first line in brackets, do not 
+assume everybody will know how a file is used.
+All other file types are left the way they are.
+
+WHEN ADDING HOOKS OR FOLDERS: Please please navigate the svn in
+order to determine that A: The folder already exists and B:
+that you save in a revision or have the decency to check if a
+file is stored under the same name. IF IT IS SOMETHING NEW:
+Name it in such a fashion that its purpose is easily discovered
+for others or will remind you what the file or folder itself 
+contains. If not, include a readme file determining the contents
+of the folder. Yes, it is fun to name directories SUN_TZU but 
+in practice it is an utter pain to decrypt 2 months later when
+it is opened to only find some serial dynamic link libraries.
+
+THE JHS GAMEMAKER TEAMS WILL ALSO UTILIZE PARTITIONS OF 
+team2374 UNLESS IT IS DEEMED STUPID AND SUPERFICIAL.
+This means all users have utmost courtesy of others work. I will
+make weekly backups of the svn, and any foolishness such as dropping
+a 420 GB jpeg into a project folder is not going to be tolerated and
+will be rolled back. Any project members can contact me in order to
+have their folder's content manually backed up.
