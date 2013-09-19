@@ -1,0 +1,51 @@
+POST /mi_servicelayer/Browse.svc HTTP/1.1
+Host: servicelayer.inventor.gateway.grantadesign.com
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8; action="http://www.grantadesign.com/10/06/Browse/GetDatabasesRequest"
+Content-Length: 129
+Connection: close
+Accept-Encoding: gzip, deflate
+Authorization: Basic bWlyZWFkdXNlcjp6b2czN3djdDlM
+SOAPAction: "http://www.grantadesign.com/10/06/Browse/GetDatabasesRequest"
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Body></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /mi_servicelayer/Browse.svc HTTP/1.1
+Host: servicelayer.inventor.gateway.grantadesign.com
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8; action="http://www.grantadesign.com/10/06/Browse/GetDatabasesRequest"
+Content-Length: 129
+Connection: close
+Accept-Encoding: gzip, deflate
+Authorization: Basic bWlyZWFkdXNlcjp6b2czN3djdDlM
+SOAPAction: "http://www.grantadesign.com/10/06/Browse/GetDatabasesRequest"
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Body></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /mi_servicelayer/DataExport.svc HTTP/1.1
+Host: servicelayer.inventor.gateway.grantadesign.com
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8; action="http://www.grantadesign.com/10/06/DataExport/GetRecordAttributesByRefRequest"
+Content-Length: 2683
+Connection: close
+Accept-Encoding: gzip, deflate
+Authorization: Basic bWlyZWFkdXNlcjp6b2czN3djdDlM
+SOAPAction: "http://www.grantadesign.com/10/06/DataExport/GetRecordAttributesByRefRequest"
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Body><data:GetRecordAttributesByRef xmlns:data="http://www.grantadesign.com/10/06/DataExport"><data:resultAttribute xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIAttributeReference"><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:name gbt:isStandard="true"><gbt:pseudo>name</gbt:pseudo></gbt:name></data:resultAttribute><data:resultAttribute xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIAttributeReference"><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:name gbt:isStandard="true"><gbt:pseudo>shortName</gbt:pseudo></gbt:name></data:resultAttribute><data:resultAttribute xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIAttributeReference"><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:name gbt:isStandard="true"><gbt:pseudo>recordColor</gbt:pseudo></gbt:name></data:resultAttribute><data:resultAttribute xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIAttributeReference"><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:name gbt:isStandard="true"><gbt:pseudo>recordType</gbt:pseudo></gbt:name></data:resultAttribute><data:resultAttribute xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIAttributeReference"><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:name gbt:isStandard="true"><gbt:pseudo>recordHistoryIdentity</gbt:pseudo></gbt:name></data:resultAttribute><data:recordReference xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIRecordReference"><gbt:serverAddress></gbt:serverAddress><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:recordGUID>48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5</gbt:recordGUID><gbt:recordHistoryGUID>443FF4C0-B220-406B-A03C-AE1602BB69A3</gbt:recordHistoryGUID></data:recordReference><data:unitConversionContext xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:UnitConversionContext"><gbt:unitSystem>CGS (Consistent)</gbt:unitSystem><gbt:currency>USD</gbt:currency><gbt:absoluteUnits>false</gbt:absoluteUnits></data:unitConversionContext><data:populateGUIDs>true</data:populateGUIDs></data:GetRecordAttributesByRef></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /mi_servicelayer/Browse.svc HTTP/1.1
+Host: servicelayer.inventor.gateway.grantadesign.com
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8; action="http://www.grantadesign.com/10/06/Browse/GetLinkedRecordsRequest"
+Content-Length: 1264
+Connection: close
+Accept-Encoding: gzip, deflate
+Authorization: Basic bWlyZWFkdXNlcjp6b2czN3djdDlM
+SOAPAction: "http://www.grantadesign.com/10/06/Browse/GetLinkedRecordsRequest"
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Body><browse:GetLinkedRecords xmlns:browse="http://www.grantadesign.com/10/06/Browse"><gbt:recordLinkGroups xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes"><gbt:recordLinkGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIRecordLinkGroupReference"><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:name><gbt:recordLinkGroupName xsi:type="gbt:ReferenceByName" gbt:isStandard="true">Eco processes</gbt:recordLinkGroupName></gbt:name></gbt:recordLinkGroup></gbt:recordLinkGroups><gbt:recordReferences xmlns:gbt="http://www.grantadesign.com/10/06/GrantaBaseTypes"><gbt:record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="gbt:MIRecordReference"><gbt:serverAddress></gbt:serverAddress><gbt:dbKey>MI_InventorSustainability</gbt:dbKey><gbt:identity><gbt:recordHistoryIdentity>30920</gbt:recordHistoryIdentity></gbt:identity><gbt:recordGUID>48745BB7-BE14-4E5F-B4E0-4C3D4A7AE7A5</gbt:recordGUID><gbt:recordHistoryGUID>443FF4C0-B220-406B-A03C-AE1602BB69A3</gbt:recordHistoryGUID></gbt:record></gbt:recordReferences><browse:populateGUIDs>true</browse:populateGUIDs></browse:GetLinkedRecords></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /updateservice/updateservice.svc HTTP/1.1
+Host: updates.inventor.gateway.grantadesign.com
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8; action="http://www.grantadesign.com/Gateway/Update/GetUpdateInformation"
+Content-Length: 709
+Connection: close
+Accept-Encoding: gzip, deflate
+SOAPAction: "http://www.grantadesign.com/Gateway/Update/GetUpdateInformation"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:update1="http://www.grantadesign.com/Gateway/Update"><SOAP-ENV:Body><update1:GetUpdateInformationRequest><update1:RunningProduct xsi:type="update1:Product"><update1:ClientType>MIMaterialsGateway_AutodeskInventor_64</update1:ClientType><update1:Level>Teaser</update1:Level><update1:GatewayVersion>1.32.0.0</update1:GatewayVersion></update1:RunningProduct></update1:GetUpdateInformationRequest></SOAP-ENV:Body></SOAP-ENV:Envelope>
