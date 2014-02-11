@@ -27,7 +27,7 @@ public class IntakeSystem {
     
     AnalogChannel IR; //changing to a limit switch
     public IntakeSystem(){
-        roller=new SafeJaguar(5);
+        roller=new SafeJaguar(7);
         IR=new AnalogChannel(3); //changing to limit switch
         
         rollerDown = new DigitalInput(rollerDownlimSwitchPort);
@@ -43,34 +43,56 @@ public class IntakeSystem {
     }
     
     public void gatherBall(){
-        if(currentState==LOWER_ARM_INTAKE_BALL){ //if you're lowering arm and intaking ball
+        //make sure nothing happnes if starting situation is wrong
+        if(currentState != IDLE){ 
+            return;
+        }
+        //if everything is fine, begin; set things going to bring ball in
+        else{
+            currentState = LOWER_ARM_INTAKE_BALL;
             roller.set(-1);
-            //if roller arm is down, stop adjusting height
-            if(rollerDown.get()){ 
-                roller_height_adjuster.set(0);
-            }
-            //otherwise keep adjusting height
-            else{
-                roller_height_adjuster.set(0.5);
-            }
-            //if got ball, time to change state
-            if(this.hasBall()){
-                currentState=HIGHER_ARM_STOP_ROLLER;
-            }
+            roller_height_adjuster.set(1);
         }
-        else if(currentState==HIGHER_ARM_STOP_ROLLER){
+        
+        //as long as either the roller arm hasn't reached it's limit or the ball
+        //has not been brought in, change nothing about what's happening
+        while(!rollerDown.get() || !this.hasBall());
+        //if roller arm has reached limit, stop moving the roller arm
+        if(rollerDown.get()){
+            roller_height_adjuster.set(0);
+            //don't change anything else as long as the ball hasn't been retrieved 
+            while(!this.hasBall());
+            //objectives of state have been achieved; change state now
+            currentState = HIGHER_ARM_STOP_ROLLER;
+        }
+        //if ball has been obtained, objectives of state have been acieved; change state now
+        else if(this.hasBall()){
+            currentState = HIGHER_ARM_STOP_ROLLER;
+        }
+        //Since state has been changed, change other factors accordingly
+        roller_height_adjuster.set(-0.5);
+        roller.set(-0.5);
+        //As long as the roller arm has not reached its upper limit, don't change anything
+        while(!rollerUp.get());
+        //objective of state has been achieved; change state; change factors accordingly
+        currentState = IDLE;
+        roller.set(0);
+        roller_height_adjuster.set(0);
+        
+       
+            //currentState = HIGHER_ARM_STOP_ROLLER;
+         //else if (currentState == HIGHER_ARM_STOP_ROLLER) {
             //if roller arm down, keep adjusting height
-            if(rollerDown.get()){
-                roller.set(-0.5); //roller slows, but doesn't stop yet; ensure ball captured
-                roller_height_adjuster.set(-0.5);
+            //if (rollerDown.get()) {
+                //roller.set(-0.5); //roller slows, but doesn't stop yet; ensure ball captured
+                //roller_height_adjuster.set(-0.5);
+            //} //if roller arm is up, stop adjusting height and stop roller
+            //else if (rollerUp.get()) {
+              //  roller.set(0);
+                //roller_height_adjuster.set(0);
+                //currentState = IDLE;
             }
-            //if roller arm is up, stop adjusting height and stop roller
-            else if(rollerUp.get()){
-                roller.set(0);
-                roller_height_adjuster.set(0);
-                currentState = IDLE;
-            }
-        }
+        
     }
     
   /*public void gatherBall(){
@@ -112,4 +134,4 @@ public class IntakeSystem {
            }
            roller.set(0);
             */
-}
+
