@@ -1,0 +1,53 @@
+#access .menu-header ul,
+div.menu ul {
+	float: right;
+	list-style: none;
+	margin: 0;
+	margin-right: 75px;
+}
+
+#site-title {
+	display: none;
+}
+#site-description {
+	display: none;
+}
+
+#member-view #member-image{
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+#member-view #member-info{
+	float:left;
+	height:300px;
+	margin-left:35px;
+	line-height:250%;
+	font-size:18px;
+}
+
+#member-about{
+	clear:both;
+}
+
+.members-list a, a:visited{
+	color:green;
+}
+.members-list a:hover{
+	color:red;
+}
+
+.stat-label{
+	font-weight:bold;
+}
+
+#member-view #member-info .title{
+	font-weight:bold;
+	font-size:36px;
+}
+
+.page-title span {
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+}
