@@ -1,0 +1,379 @@
+body, html
+{
+	background: url(pat/massive_charlie_watermark.png) no-repeat center center fixed,
+				url(pat/slightly_less_dark_squares.png) repeat left top fixed;
+				
+	-webkit-background-size: cover, auto;
+	-moz-background-size: cover, auto;
+	-o-background-size: cover, auto;
+	background-size: cover,auto;
+	color: #FFF;
+	font-family: "Helvetica", "Ubuntu", "DejaVu Sans", sans-serif;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+}
+
+*
+{
+	transition: 0.15s all;
+	-moz-transition: 0.15s all;
+	border-width: 0px;
+}
+a
+{
+	text-decoration: none;
+}
+
+img.retina
+{
+	width: 64px;
+	height: 64px;
+	vertical-align: bottom;
+}
+nav
+{
+	font-family: "Trebuchet MS", "Trebuchet", "Ubuntu", "Arial", "Helvetica", "DejaVu Sans", sans-serif;
+}
+nav ul ul
+{
+	display: block;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    opacity: 0; 
+    height: 0;
+    overflow: hidden;
+}
+
+	nav ul li:hover > ul
+	{
+		opacity: 1;
+		height: auto;
+	}
+
+nav > ul
+{
+	background-color: rgba(0, 0, 0, 0.1);
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUzMzPK7GI1AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAAd0SU1FB94BHBAnG4/JzpEAAAAKSURBVAjXY2AAAAACAAHiIbwzAAAAAElFTkSuQmCC);
+	background-position:left bottom;
+	background-repeat: repeat-x;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.large
+{
+	line-height: 64px;
+}
+	nav ul:after
+	{
+		content: "";
+		clear: both;
+		display: block;
+	}
+nav ul li
+{
+	float: left;
+}
+
+nav ul li:nth-child(1) a
+{
+
+}
+	nav ul li:hover
+	{
+		background: #333;
+	}
+		nav > ul > li:hover > a
+		{
+			color: #fff;
+			border-bottom: 1px solid #286d0a;
+		}
+	
+	nav ul li a
+	{
+		display: block;
+		padding: 25px 20px;
+		color: #FFF;
+		text-decoration: none;
+		border-bottom: 1px solid #333;
+	}
+nav > ul > li:nth-child(1) a
+{
+	font-size: 56px;
+	padding: 1px 20px 1px 1px;
+}
+nav ul li:nth-child(1) ul li a
+{
+	font-size: 16px;
+	padding: 15px 20px;
+}
+nav ul li:nth-child(1) ul
+{
+	positon: relative;
+	left: 262px;
+}
+nav ul ul
+{
+	background: #333;
+	border-radius: 0px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+}
+	nav ul ul li
+	{
+		float: none; 
+		position: relative;
+	}
+		nav ul ul li a
+		{
+			padding: 15px 20px;
+			color: #fff;
+		}	
+			nav ul ul li a:hover
+			{
+				background: #286d0a;
+			}
+			
+#main
+{
+	width: 80%;
+	margin-left: .7em;
+	margin-right: auto;
+	line-height: 120%;
+	margin-top: .7em;
+}
+#body
+{
+	padding: 10px;
+	padding-bottom: 104px;
+	height: 100%;
+}
+img.in
+{
+	float: left;
+	margin-right: .5em;
+}
+img[alt="8020"]
+{
+	width: 18px;
+	height: 18px;
+}
+h2
+{
+font-size: x-large;
+margin-bottom: .7em;
+}
+
+#container
+{
+
+}
+
+footer
+{
+	background-color: rgba(0, 0, 0, 0.1);
+	background-image: url(pat/pixelborder.png);
+	background-position:left top;
+	background-repeat: repeat-x;
+	width:100%;
+	margin-bottom: 0px;
+	position:absolute;
+	bottom:0px;
+	left:0;
+	vertical-align: bottom;
+	height: 104px;
+	overflow: hidden;
+	*/
+}
+.footerlabel
+{
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	float: left;
+	position: relative;
+	top: 44px;
+	font-weight: bold;
+
+}
+.sponsorlabel
+{
+	right: 33px;
+}
+.cryptolabel
+{
+	right: 76px;
+}
+.jesuit img
+{
+	width: 120px;
+	height: 100px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.renesas img
+{
+	width: 202px;
+	height: 32px;
+	padding-top: 2px;
+}
+.mentor img
+{
+	width: 202px;
+	height: 68px;
+	padding-bottom: 2px;
+}
+.sponsors
+{
+	width: 322px;
+	height: 104px;
+	padding: 0px;
+	float: left;
+	position: relative;
+	right:68px;
+}
+.sponsors div
+{
+	margin: none;
+	padding: none;
+	line-height: 0px;
+}
+.sponsors div a:hover img
+{
+	background-color: #333;
+}
+/*
+.jesuit img, .renesas img
+{
+	
+	border-top: 1px solid #333;
+	padding-top: 1px;
+}
+*/
+/*
+.jesuit a:hover img, .renesas a:hover img
+{
+	
+	background-color: #333;
+	border-top: 1px solid #286d0a;
+	padding-top: 1px;
+}
+*/
+.jesuit
+{
+float: left;
+}
+.renesas, .mentor
+{
+float: right
+}
+
+.crypto
+{
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	height: 104px;
+	position: relative;
+	right: 100px;
+}
+	code.address
+	{
+		font-family: "Andale Mono", monospace;
+		background-color: #AAA;
+		border: 1px solid #AAA;
+		border-radius: 3px;
+		color: #333;
+		font-weight: normal;
+		font-size: 12px;
+		position: relative;
+		bottom: 9px;
+		right: 8px;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.crypto img
+	{
+		width: 32px;
+		height: 32px;
+		position: relative;
+		z-index: 2;
+	}
+	.crypto a:hover
+	{
+		background-color: #333;
+		padding-bottom: 0px;
+	}
+		.doge a
+		{
+			padding-top: 17px;
+			height: 32px;
+			position: relative;
+			/*top: 3px;*/
+			bottom: 1px;
+			/*border-top: 1px solid #333;*/
+			padding-bottom: 0px;
+		}
+		.doge:hover a
+		{
+			/*border-top: 1px solid #286d0a;*/
+		}
+			.doge a img
+			{
+				top: 3px;
+			}
+			.doge code.address
+			{
+				background-color: #ba9f33;
+				color: #FFFFFF;
+				border: 1px solid #7c6c2a;
+			}		
+		.btc a
+		{
+			height: 32px;
+			position: relative;
+			bottom: 2px;
+			padding-bottom: 2px;
+			padding-top: 16px;
+		}
+			.btc a img
+			{
+				top: 3px;
+			}
+			.btc code.address
+			{
+				border: none;
+				background: #f9a540; /* Old browsers */
+				background: -moz-linear-gradient(top,  #f9a540 0%, #f89a28 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9a540), color-stop(100%,#f89a28)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #f9a540 0%,#f89a28 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #f9a540 0%,#f89a28 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #f9a540 0%,#f89a28 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  #f9a540 0%,#f89a28 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9a540', endColorstr='#f89a28',GradientType=0 ); /* IE6-9 */
+				color: #FFF;
+				padding-top: 1px;
+				padding-bottom: 1px;
+			}
+		.ltc a
+		{
+			height: 32px;
+			padding-top: 19px;
+		}
+			.ltc code.address
+			{
+				border: 1px solid #575757;
+				bottom: 12px;
+				background-image: url(pat/litestripe.png);
+				background-size: 14px 36.833px;
+				background-position-x: -3px;
+				text-shadow: 0px 0px 3px #FFF;
+				color: black;
+			}
