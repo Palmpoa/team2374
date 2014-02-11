@@ -17,18 +17,19 @@ public class Drivetrain {
                                 new SafeJaguar(3),new SafeJaguar(4)}; //L,L,R,R
         gyro=new CalibratedGyro(1);
         heading=0;
-        
+        //MAKE SURE RED->RED AND BLACK->BLACK
+        //(software accounts for reversal)
         
     }
     public void set(double leftSpeed, double rightSpeed){
-        motors[0].set(leftSpeed);
-        motors[1].set(leftSpeed);
+        motors[0].set(-leftSpeed);
+        motors[1].set(-leftSpeed);
         motors[2].set(rightSpeed);
         motors[3].set(rightSpeed);
     }
     public void setDirect(double leftSpeed, double rightSpeed){
-        motors[0].setDirect(leftSpeed);
-        motors[1].setDirect(leftSpeed);
+        motors[0].setDirect(-leftSpeed);
+        motors[1].setDirect(-leftSpeed);
         motors[2].setDirect(rightSpeed);
         motors[3].setDirect(rightSpeed);
     }

@@ -35,8 +35,8 @@ public class RobotTemplate extends SimpleRobot {
     AnalogChannel sonar;
     
     Encoder encoder;
-    int encoderPortA=2; // assign
-    int encoderPortB=3; // assign
+    int encoderPortA=3; // assign 
+    int encoderPortB=4; // assign 
     
     public void robotInit(){
         drivetrain=new Drivetrain();
@@ -98,7 +98,7 @@ public class RobotTemplate extends SimpleRobot {
     public void operatorControl() {
         drivetrain.calibrateGyro();
         
-        encoder.start();
+        //encoder.reset();
         
         while(isOperatorControl()&&isEnabled()){
             double lspeed=drivestick.getRawAxis(2);
@@ -112,38 +112,55 @@ public class RobotTemplate extends SimpleRobot {
             //Note: change this so the intake control is on the stick controller
             //as opposed to the driver's controller; to be done after
             //prototyping, testing is done
-            if(Math.abs(drivestick.getRawAxis(5))>0.5)intake.setRoller(0); 
-            if(drivestick.getRawAxis(6)>0.5)intake.setRoller(1); 
-            if(drivestick.getRawAxis(6)<-0.5)intake.setRoller(-1);
             
-            if(drivestick.getRawButton(8))intake.setArm(-0.5);
-            else if(drivestick.getRawButton(6))intake.setArm(0.5);
-            else intake.setArm(0);
+            //if(Math.abs(drivestick.getRawAxis(5))>0.5)intake.setRoller(0); 
+            //if(drivestick.getRawAxis(6)>0.5)intake.setRoller(1); 
+            //if(drivestick.getRawAxis(6)<-0.5)intake.setRoller(-1);
             
-            if(drivestick.getRawButton(1))drivetrain.calibrateGyro();
-            if(drivestick.getRawButton(2)){
-                encoder.reset();
-                encoder.start();
+            //if(drivestick.getRawButton(8))intake.setArm(-0.5);
+            //else if(drivestick.getRawButton(6))intake.setArm(0.5);
+            //else intake.setArm(0);
+            
+            
+            if(drivestick.getRawButton(1)||drivestick.getRawButton(4)){
+                if(drivestick.getRawButton(1)){ //LONG SHOT
+                    catapult.stopValue=(int)(ds.getAnalogIn(1)*100);//for testing purposes
+                    catapult.power=0.85; //experimentally found value
+                }
+                if(drivestick.getRawButton(4)){ //SHORT SHOT
+                    catapult.stopValue=(int)(ds.getAnalogIn(2)*100);//for testing purposes
+                    catapult.power=1;
+                }
+                if(intake.prepareToShoot()){
+                    catapult.shoot();
+                }
+            }
+            else{
+                catapult.reload();
+                if(!catapult.restPos.get()){
+                    intake.prepareToShoot();
+                }
+                else if(drivestick.getRawButton(8))intake.pass();
+                else if(intake.ballDetector.get())intake.resetArm();
+                else if(drivestick.getRawButton(6))intake.pickUp();
+                else intake.resetArm();
             }
             
-            if(drivestick.getRawButton(5))catapult.shoot();
-            else if(drivestick.getRawButton(7))catapult.reload();
-            else catapult.stop();
+
             
             catapult.update();
-            
-            catapult.setPower(ds.getAnalogIn(1));
             lcd.println(DriverStationLCD.Line.kUser3, 1, "Sonar: "+round(sonar.getVoltage(),4)+"  ");
-            lcd.println(DriverStationLCD.Line.kUser2, 1, "Power: "+percentString(catapult.power)+"    ");
-            lcd.println(DriverStationLCD.Line.kUser1, 1,"SoftStop: "+catapult.softStop.get()+"   ");
-            lcd.println(DriverStationLCD.Line.kUser4, 1, "Gyro: "+round(drivetrain.gyro.getAngle(),4)+"  ");
+            //lcd.println(DriverStationLCD.Line.kUser2, 1, "Power: "+percentString(catapult.power)+"    ");
             
-            lcd.println(DriverStationLCD.Line.kUser6, 1, "Encoder Value: " + encoder.get()); //please verify
+            lcd.println(DriverStationLCD.Line.kUser3, 1, catapult.armOffset+"        ");
+            lcd.println(DriverStationLCD.Line.kUser1, 1,"Shooter: "+catapult.softStop.get()+"   ");
+            lcd.println(DriverStationLCD.Line.kUser4, 1,"Sh_Rest: "+catapult.restPos.get()+"   ");
+            //lcd.println(DriverStationLCD.Line.kUser4, 1, "Gyro: "+round(drivetrain.gyro.getAngle(),4)+"  ");
+            lcd.println(DriverStationLCD.Line.kUser5, 1, "S_Encoder: "+catapult.getArmPos()+"     ");
+            lcd.println(DriverStationLCD.Line.kUser6, 1, "D_Encoder: " + encoder.getDistance()+"      "); //please verify
             
             lcd.updateLCD();
         }
-        
-        encoder.stop();
     }
     
     /**
